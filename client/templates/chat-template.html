@@ -1,0 +1,24 @@
+<template name="appChat">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="inputs">
+				<form class="form">
+					<input type="text" class="form-control txtName" placeholder="Username">
+					<textarea style="overflow:auto;resize:none" rows="4" cols="50" class="form-control txtText" placeholder="Message here..."></textarea>
+				</form>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<ul class="list-group">
+				{{#each messages}}
+					<div class="alert alert-info" role="alert">
+						<button type="button" class="close btnDelete" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<b>{{name}}</b> : {{text}}
+					</div>
+				{{/each}}		
+			</ul>
+		</div>
+	</div>
+</template> 
